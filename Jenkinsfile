@@ -13,10 +13,8 @@ pipeline {
       stages {
         stage('Build APK') {
           steps {
-            dir('android-app') {
-              sh 'chmod +x gradlew'
-              sh './gradlew clean assembleDebug'
-            }
+            sh 'chmod +x gradlew'
+            sh './gradlew clean assembleDebug'
           }
         }
 
